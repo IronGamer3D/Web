@@ -1,27 +1,21 @@
 {
-  "name": "jquery-idletimer",
-  "main": "dist/idle-timer.js",
+  "name": "webmania",
   "version": "1.1.0",
-  "engines": {
-    "node": ">= 0.6.0"
-  },
+  "description": "",
+  "main": "gulpfile.js",
   "scripts": {
-    "test": "grunt qunit"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/thorst/jquery-idletimer.git"
-  },
+  "author": "",
+  "license": "ISC",
   "devDependencies": {
-    "grunt-contrib-jshint": "0.9.2",
-    "grunt-contrib-concat": "0.3.0",
-    "grunt-contrib-uglify": "0.4.0",
-    "grunt-contrib-watch": "0.6.0",
-    "grunt-coveralls": "0.3.0",
-    "grunt-qunit-istanbul": "^0.4.0",
-    "grunt": "0.4.2"
+    "gulp": "^4.0.2",
+    "gulp-cached": "^1.1.1",
+    "gulp-dependents": "^1.2.5",
+    "gulp-sass": "^5.0.0",
+    "gulp-watch": "^5.0.1",
+    "gulp-watch-sass": "^1.4.1",
+    "sass": "^1.35.1"
   },
-  "dependencies": {
-
-  }
+  "dependencies": {}
 }

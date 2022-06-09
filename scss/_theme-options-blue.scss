@@ -1,0 +1,31 @@
+/* 
+---------------------------------------------
+font & reset css
+--------------------------------------------- 
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700&subset=latin-ext');
+
+$font : 'Quicksand', sans-serif;
+
+$light: 300;
+$normal: 400;
+$medium: 500;
+$bold: 700;
+
+
+// General Colors
+$primaryColor: #4278E5;
+$secondaryColor: #E2EBFF;
+
+// Gradient Colors
+$gradientDark: #17CADD;
+$gradientLight: #4A45DA;
+
+//Heading Color
+$headingDark: #3B566E;
+$headingLight: #ffffff;
+
+// Text Colors
+$textDark: #6F8BA4;
+$textLight: #C7E5FF;
