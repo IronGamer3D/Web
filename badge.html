@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Responsive Admin Dashboard Template">
+  <meta name="keywords" content="admin,dashboard">
+  <meta name="author" content="stacks">
+  <!-- The above 6 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+  <!-- титульник -->
+  <title>Форма</title>
+
+  <!-- Styles -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,700,800&display=swap" rel="stylesheet">
+  <link href="../../assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../../assets/plugins/font-awesome/css/all.min.css" rel="stylesheet">
+  <link href="../../assets/plugins/perfectscroll/perfect-scrollbar.css" rel="stylesheet">
+  <link href="../../assets/plugins/apexcharts/apexcharts.css" rel="stylesheet">
+
+
+  <!-- Темы -->
+  <link href="../../assets/css/main.min.css" rel="stylesheet">
+  <link href="../../assets/css/custom.css" rel="stylesheet">
+
+</head>
+<body style="font-family: Arial, Verdana, sans-serif">
+  <!-- Иконка загрузки -->
+  <div class='loader'>
+    <div class='spinner-grow text-primary' role='status'>
+      <span class='sr-only'>Загрузка...</span>
+    </div>
+  </div>
+
+  <div class="page-container">
+    <!-- Верхняя панель -->
+    <div class="page-header">
+      <nav class="navbar navbar-expand-lg d-flex justify-content-between">
+        <div class="" id="navbarNav">
+          <ul class="navbar-nav" id="leftNav">
+            <li class="nav-item">
+              <a class="nav-link" id="sidebar-toggle" href="#"><i data-feather="arrow-left"></i></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="D:/Website/Home/html/blue-index.html">Начальная Страница</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Помощь</a>
+            </li>
+          </ul>
+        </div>
+        <div class="logo">
+          <a class="navbar-brand" href="index.html"></a>
+        </div>
+        <div class="" id="headerNav">
+          <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+              <a class="nav-link search-dropdown" href="#" id="searchDropDown" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i data-feather="search"></i></a>
+              <div class="dropdown-menu dropdown-menu-end dropdown-lg search-drop-menu" aria-labelledby="searchDropDown">
+                <form>
+                  <input class="form-control" type="text" placeholder="Напишите что нибудь.." aria-label="Search">
+                </form>
+                <h6 class="dropdown-header">Недавние поиски</h6>
+                <a class="dropdown-item" href="D:/Website/Admin/theme/templates/admin1/tree-view.html">Статистика</a>
+                <a class="dropdown-item" href="#">Карта</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link notifications-dropdown" href="#" id="notificationsDropDown" role="button" data-bs-toggle="dropdown" aria-expanded="false">3</a>
+              <div class="dropdown-menu dropdown-menu-end notif-drop-menu" aria-labelledby="notificationsDropDown">
+                <h6 class="dropdown-header">Уведомления</h6>
+                <a href="D:/Website/Admin/theme/templates/admin1/index.html">
+                  <div class="header-notif">
+                    <div class="notif-image">
+                      <span class="notification-badge bg-info text-white">
+                        <i class="fas fa-bullhorn"></i>
+                      </span>
+                    </div>
+                    <div class="notif-text">
+                      <p class="bold-notif-text">Спасибо за регистрацию! Добро пожаловать!</p>
+                      <small>19:00</small>
+                    </div>
+                  </div>
+                </a>
+                <a href="D:/Website/Admin/theme/templates/admin1/badge.html">
+                  <div class="header-notif">
+                    <div class="notif-image">
+                      <span class="notification-badge bg-primary text-white">
+                        <i class="fas fa-bolt"></i>
+                      </span>
+                    </div>
+                    <div class="notif-text">
+                      <p class="bold-notif-text">Ознакомьтесь с формой</p>
+                      <small>18:00</small>
+                    </div>
+                  </div>
+                </a>
+                <a href="#">
+                  <div class="header-notif">
+                    <div class="notif-image">
+                      <span class="notification-badge bg-success text-white">
+                        <i class="fas fa-at"></i>
+                      </span>
+                    </div>
+                    <div class="notif-text">
+                      <p>Подтвердите адрес электронной почты</p>
+                      <small>Вчера</small>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link profile-dropdown" href="#" id="profileDropDown" role="button" data-bs-toggle="dropdown" aria-expanded="false"><img src="../../assets/images/avatars/profile-image.png" alt=""></a>
+              <div class="dropdown-menu dropdown-menu-end profile-drop-menu" aria-labelledby="profileDropDown">
+                <a class="dropdown-item" href="D:/Website/Admin/theme/templates/admin1/index.html"><i data-feather="user"></i>Профиль</a>
+                <a class="dropdown-item" href="#"><i data-feather="check-circle"></i>Вопросы</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="D:/Website/Admin/theme/templates/admin1/lockscreen.html"><i data-feather="log-out"></i>Выход</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <!-- Админ панель -->
+    <div class="page-sidebar">
+      <ul class="list-unstyled accordion-menu">
+        <li class="sidebar-title">
+          Главный экран
+        </li>
+        <li class="active-page">
+          <a href="index.html"><i data-feather="home"></i>Личный кабинет</a>
+        </li>
+        <li class="sidebar-title">
+          Возможности
+        </li>
+        <li>
+          <a href="badge.html"><i data-feather="edit"></i>Форма</a>
+        </li>
+        <li>
+          <a href="cards.html"><i data-feather="layers"></i>Карты</a>
+        </li>
+
+        <li>
+          <a href="tree-view.html"><i data-feather="pie-chart"></i>Статистика</a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Форма переписи населения  -->
+    <div class="page-content">
+      <div class="main-wrapper">
+        <div class="row">
+          <form action="">
+            <!-- Эмаил адрес  -->
+            <div class="col">
+              <div class="card">
+                <div class="card-body">
+                  <h1 class="card-title "><strong><h1>Форма Переписи населения</h1></strong></h1>
+                  <p class="card-description">Заполните форму для всероссийской статистики.</p>
+                  <form>
+                    <div class="mb-3">
+                      <label for="exampleInputEmail1" class="form-label">Email адрес</label>
+                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                      <div id="emailHelp" class="form-text">На этот адрес придет подтверждение.</div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <!-- Эмаил адрес конец  -->
+
+            <!-- Пол и ФИО  -->
+            <div class="row">
+              <div class="col">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title">Ваши данные</h5>
+
+                    <div class="row">
+                      <div class="col">
+                        <input type="text" class="form-control" placeholder="Фамилия" aria-label="Фамилия">
+                      </div>
+                      <div class="col">
+                        <input type="text" class="form-control" placeholder="Имя" aria-label="Имя">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title">Пол</h5>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault1" id="flexRadioDefault5">
+                      <label class="form-check-label" for="flexRadioDefault5">
+                        Мужской
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault1" id="flexRadioDefault6" checked>
+                      <label class="form-check-label" for="flexRadioDefault6">
+                        Женский
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Пол и ФИО конец -->
+
+            <!-- Образование СП УС  -->
+            <div class="row">
+              <div class="col">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title">Образование</h5>
+                    <div class="form-check form-switch">
+                      <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault1">
+                      <label class="form-check-label" for="flexSwitchCheckDefault1">Общее образование</label>
+                    </div>
+                    <div class="form-check form-switch">
+                      <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault2">
+                      <label class="form-check-label" for="flexSwitchCheck2">Профессиональное образование</label>
+                    </div>
+                    <div class="form-check form-switch">
+                      <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault3">
+                      <label class="form-check-label" for="flexSwitchCheck3">Дополнительное образование</label>
+                    </div>
+                    <div class="form-check form-switch">
+                      <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault4">
+                      <label class="form-check-label" for="flexSwitchCheck4">Профессиональное обучение</label>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title">Семейное положение</h5>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault2" id="flexRadioDefault1">
+                      <label class="form-check-label" for="flexRadioDefault1">
+                        Не замужем, не женат
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault2" id="flexRadioDefault2" checked>
+                      <label class="form-check-label" for="flexRadioDefault2">
+                        Замужем, женат
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault2" id="flexRadioDefault3">
+                      <label class="form-check-label" for="flexRadioDefault3">
+                        Разведён, разведена
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault2" id="flexRadioDefault4">
+                      <label class="form-check-label" for="flexRadioDefault4">
+                        Вдова, вдовец
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title">Ученые степени</h5>
+                    <div class="form-check form-switch">
+                      <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+                      <label class="form-check-label" for="flexSwitchCheckDefault">Кандидат наук</label>
+                    </div>
+                    <div class="form-check form-switch">
+                      <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+                      <label class="form-check-label" for="flexSwitchCheckDefault">Доктор наук</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Образование СП УС конец  -->
+            <div class="row">
+              <div class="col">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title">Дети</h5>
+                    <select class="form-select" aria-label="Default select example">
+                      <option selected>Нет</option>
+                      <option value="1">Один</option>
+                      <option value="2">Два</option>
+                      <option value="3">Три</option>
+                      <option value="4">Четыре</option>
+                      <option value="5">Пять</option>
+                      <option value="6">Шесть</option>
+                      <option value="7">Семь</option>
+                      <option value="8">Восемь</option>
+                      <option value="9">Девять</option>
+                      <option value="10">Десять</option>
+                    </select>
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title">Регион</h5>
+                    <select class="form-select" aria-label="Default select example">
+                      <option value="1">Республика Адыгея</option>
+                      <option value="2">Республика Алтай </option>
+                      <option value="3">Республика Башкортостан </option>
+                      <option value="4">Республика Бурятия </option>
+                      <option value="5">Республика Дагестан </option>
+                      <option value="6">Республика Ингушетия </option>
+                      <option value="7">Кабардино-Балкарская Республика</option>
+                      <option value="8">Республика Калмыкия </option>
+                      <option value="9">Карачаево-Черкесская Республика</option>
+                      <option value="10">Республика Карелия </option>
+                      <option value="11">Республика Коми </option>
+                      <option value="12">Республика Марий Эл </option>
+                      <option value="13">Республика Мордовия </option>
+                      <option value="14">Республика Саха (Якутия) </option>
+                      <option value="15">Республика Северная Осетия - Алания </option>
+                      <option value="16">Республика Татарстан</option>
+                      <option value="17">Республика Тыва </option>
+                      <option value="18">Удмуртская Республика </option>
+                      <option value="19">Республика Хакасия </option>
+                      <option value="20">Чеченская Республика</option>
+                      <option value="21">Чувашская Республика</option>
+                      <option value="22">Алтайский край</option>
+                      <option value="75">Забайкальский край</option>
+                      <option value="41">Камчатский край</option>
+                      <option value="23">Краснодарский край</option>
+                      <option value="24">Красноярский край</option>
+                      <option value="59">Пермский край</option>
+                      <option value="25">Приморский край</option>
+                      <option value="26">Ставропольский край</option>
+                      <option value="27">Хабаровский край</option>
+                      <option value="28">Амурская область </option>
+                      <option value="29">Архангельская область</option>
+                      <option value="30">Астраханская область </option>
+                      <option value="31">Белгородская область</option>
+                      <option value="32">Брянская область </option>
+                      <option value="33">Владимирская область </option>
+                      <option value="34">Волгоградская область </option>
+                      <option value="35">Вологодская область </option>
+                      <option value="36">Воронежская область </option>
+                      <option value="37">Ивановская область </option>
+                      <option value="38">Иркутская область </option>
+                      <option value="39">Калининградская область</option>
+                      <option value="40">Калужская область </option>
+                      <option value="42">Кемеровская область </option>
+                      <option value="43">Кировская область </option>
+                      <option value="44">Костромская область </option>
+                      <option value="45">Курганская область </option>
+                      <option value="46">Курская область </option>
+                      <option value="47">Ленинградская область </option>
+                      <option value="48">Липецкая область </option>
+                      <option value="49">Магаданская область</option>
+                      <option value="50">Московская область </option>
+                      <option value="51">Мурманская область </option>
+                      <option value="52">Нижегородская область </option>
+                      <option value="53">Новгородская область </option>
+                      <option value="54">Новосибирская область </option>
+                      <option value="55">Омская область</option>
+                      <option value="56">Оренбургская область </option>
+                      <option value="57">Орловская область </option>
+                      <option value="58">Пензенская область </option>
+                      <option value="60">Псковская область </option>
+                      <option value="61">Ростовская область </option>
+                      <option value="62">Рязанская область </option>
+                      <option value="63">Самарская область </option>
+                      <option value="64">Саратовская область </option>
+                      <option value="65">Сахалинская область </option>
+                      <option value="66">Свердловская область </option>
+                      <option value="67">Смоленская область </option>
+                      <option value="68">Тамбовская область </option>
+                      <option value="69">Тверская область </option>
+                      <option value="70">Томская область </option>
+                      <option value="71">Тульская область</option>
+                      <option value="72">Тюменская область </option>
+                      <option value="73">Ульяновская область </option>
+                      <option value="74">Челябинская область </option>
+                      <option value="76">Ярославская область</option>
+                      <option value="77">Москва</option>
+                      <option value="78">Санкт-Петербург</option>
+                      <option value="79">Еврейская АО</option>
+                      <option value="80">Ненецкий АО</option>
+                      <option value="81">Ханты-Мансийский АО</option>
+                      <option value="82">Чукотский АО</option>
+                      <option value="83">Ямало-Ненецкий АО</option>
+                      <option value="84">Севастополь</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col">
+                <div class="card col-md-8 mx-auto">
+                  <div class="card-body">
+                    <h1 >Уже закончили?</h1>
+                    <p class="card-description">Обязательно проверьте все свои данные</p>
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                      Готово
+                    </button>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                      <div class="modal-dialog">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Подтверждение</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                          </div>
+                          <div class="modal-body">
+                            Готовы закончить заполнение?
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                            <button type="button" class="btn btn-primary">Сохранить и отправить</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+  <!-- Javascripts -->
+  <script src="../../assets/plugins/jquery/jquery-3.4.1.min.js"></script>
+  <script src="https://unpkg.com/@popperjs/core@2"></script>
+  <script src="../../assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+  <script src="https://unpkg.com/feather-icons"></script>
+  <script src="../../assets/plugins/perfectscroll/perfect-scrollbar.min.js"></script>
+  <script src="../../assets/plugins/apexcharts/apexcharts.min.js"></script>
+  <script src="../../assets/js/main.min.js"></script>
+  <script src="../../assets/js/pages/dashboard.js"></script>
+</body>
+</html>
